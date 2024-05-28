@@ -40,15 +40,15 @@ def main():
     ###############################################
     # SIDEBAR SETTINGS / PARAMETERS
     ###############################################
-    txt_query_telegram = st.sidebar.text_area("Search on Telegram", value="macron", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False, label_visibility="visible")
-    txt_query_twitter = st.sidebar.text_area("Search on Twitter", value="macron", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False, label_visibility="visible")
+    txt_query_telegram = st.sidebar.text_area("Search on Telegram", value="macron", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+    txt_query_twitter = st.sidebar.text_area("Search on Twitter", value="macron", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
     
-    date = st.sidebar.date_input("Timerange", value = [df['datetime'].min(), df['datetime'].max()], min_value=df['datetime'].min(), max_value=df['datetime'].max(), format="YYYY/MM/DD", label_visibility="visible")
-    lang = st.sidebar.selectbox("Language", ['english', 'russian'], index = 0, placeholder="Choose an option", label_visibility="visible")
-    ignore_case = st.sidebar.toggle("Ignore case", value=True, label_visibility="visible")
-    ignore_accent = st.sidebar.toggle("Ignore accent", value=True, label_visibility="visible")
-    match_word = st.sidebar.toggle("Match words", value=True, label_visibility="visible")
-    rolling_period = st.sidebar.text_input("Rolling period", value='7D', label_visibility="visible")
+    date = st.sidebar.date_input("Timerange", value = [df['datetime'].min(), df['datetime'].max()], min_value=df['datetime'].min(), max_value=df['datetime'].max(), format="YYYY/MM/DD")
+    lang = st.sidebar.selectbox("Language", ['english', 'russian'], index = 0, placeholder="Choose an option")
+    ignore_case = st.sidebar.toggle("Ignore case", value=True)
+    ignore_accent = st.sidebar.toggle("Ignore accent", value=True)
+    match_word = st.sidebar.toggle("Match words", value=True)
+    rolling_period = st.sidebar.text_input("Rolling period", value='7D')
    
     ###############################################
     # DATA FILTERING
