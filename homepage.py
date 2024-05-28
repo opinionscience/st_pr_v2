@@ -44,7 +44,7 @@ def main():
     txt_query_twitter = st.sidebar.text_area("Search on Twitter", value="macron", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
     
     date = st.sidebar.date_input("Timerange", value = [df['datetime'].min(), df['datetime'].max()], min_value=df['datetime'].min(), max_value=df['datetime'].max())
-    lang = st.sidebar.selectbox("Language", ['english', 'russian'], index = 0, placeholder="Choose an option")
+    lang = st.sidebar.selectbox("Language", ['english', 'russian'], index = 0)
     ignore_case = st.sidebar.toggle("Ignore case", value=True)
     ignore_accent = st.sidebar.toggle("Ignore accent", value=True)
     match_word = st.sidebar.toggle("Match words", value=True)
