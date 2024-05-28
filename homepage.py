@@ -30,7 +30,7 @@ def main():
     ###############################################
     # LOAD DATA
     ###############################################
-    df = load_pickle("data/df_prod.pickle")
+    df = load_pickle("data/df_prod_v2.pickle")
     df["datetime"]= pd.to_datetime(df["date"])
 
     plateforme_color_palette = read_json("data/plateforme_color_palette.json")
