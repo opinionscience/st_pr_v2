@@ -7,6 +7,8 @@ from opsci_toolbox.helpers.nlp import load_stopwords_df
 from eldar import Query
 import plotly.express as px
 
+import pickle
+
 def format_number(number):
     if number < 1000:
         return str(number)
