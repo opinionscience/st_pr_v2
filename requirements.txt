@@ -1,5 +1,5 @@
 eldar==0.0.8
-opsci_toolbox==0.0.5
+opsci_toolbox==0.0.6
 streamlit
 pygraphviz
 unidecode
